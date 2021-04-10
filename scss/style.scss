@@ -18,20 +18,33 @@ li {
 $primary-color: #1abc9c;
 $secondary-color : #2c3e50;
 
+@keyframes apparition {
+    100%{
+    opacity: 1;
+    transform: none;
+    }
+}
+
 // Header
 
 .header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 100px;
+    height: 80px;
     background-color: $secondary-color;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
     & h1{
         font-size: 1.8rem;
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: apparition 0.5s 1s ease-in-out forwards;
     }
     & ul{
         width: 400px;
@@ -39,6 +52,9 @@ $secondary-color : #2c3e50;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        opacity: 0;
+        transform: translateY(-30px);
+        animation: apparition 0.5s 1.3s ease-in-out forwards;
     }
 }
 .nav li {
@@ -51,13 +67,17 @@ $secondary-color : #2c3e50;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 600px;
+    padding-top: 80px;
+    height: 700px;
     background-color: $primary-color;
     color: white;
     & img{
         padding-top: 50px;
         height: 300px;
         width: 300px;
+        opacity: 0;
+        transform: translateX(30px);
+        animation: apparition 0.5s 0.8s ease-in-out forwards;
     }
     & h2{
         padding-top: 40px;
@@ -65,9 +85,15 @@ $secondary-color : #2c3e50;
         text-transform: uppercase;
         font-weight: bold;
         padding-bottom: 20px;
+        opacity: 0;
+        transform: translateX(30px);
+        animation: apparition 0.5s 0.5s ease-in-out forwards;
     }
     & p{
         font-size: 1.5rem;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: apparition 0.5s 1.3s ease-in-out forwards;
     }
 }
 
@@ -78,6 +104,9 @@ $secondary-color : #2c3e50;
     width: 320px;
     color: white;
     padding-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: apparition 0.5s 1.3s ease-in-out forwards;
     & i{
         font-size: 1.8rem;
     }
@@ -117,7 +146,7 @@ $secondary-color : #2c3e50;
     justify-content: center;
     align-items: center;
     width: 320px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     & i{
         font-size: 1.8rem;
         color: $secondary-color
@@ -139,19 +168,54 @@ $secondary-color : #2c3e50;
 }
 
 .portfolio__img{
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     height: 430px;
     max-width: 830px;
-    & img {
-        height: 180px;
-        width: 250px;
-        border-radius: 10px;
-        transition: 300ms ease-in-out;
-        &:hover{
-            transform: scale(1.05);
-        }
+}
+
+.portfolio__img img{
+    height: 180px;
+    width: 250px;
+    border-radius: 10px;
+    transition: 150ms ease-in-out;
+    &:hover{
+        opacity: .4;
+    }
+}
+
+.background{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    position: absolute;
+    bottom: 250px;
+    z-index: -1;
+    & .fas{
+        color:white;
+        font-size: 5rem;
+    }
+}
+.background2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 180px;
+    width: 250px;
+    border-radius: 10px;
+    background-color: $primary-color;
+    position: absolute;
+    bottom: 35px;
+    z-index: -1;
+    & .fas{
+        color:white;
+        font-size: 5rem;
     }
 }
 
@@ -255,5 +319,58 @@ $secondary-color : #2c3e50;
     transition: 200ms ease-in-out;
     &:hover{
         background-color: darken($primary-color, 10%);
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: $secondary-color;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+.location, .social, .freelance{
+    text-align: center;
+    max-width: 215px;
+    & h4{
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    & p{
+        line-height: 1.6;
+    }
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    width: 280px;
+    position: relative;
+    right: 35px;
+    & .icon{
+        font-size: 1.3rem;
+        padding: 13px;
+        border : 2px solid white;
+        border-radius: 50%;
+        &:hover{
+            transition: 250ms ease-in-out;
+            background-color: white;
+            color: $secondary-color;
+        }
+    }
+    & .fb{
+        font-size: 1.3rem;
+        padding: 13px 17px;
+        border : 2px solid white;
+        border-radius: 50%;
+        &:hover{
+            transition: 250ms ease-in-out;
+            background-color: white;
+            color: $secondary-color;
+        }
     }
 }

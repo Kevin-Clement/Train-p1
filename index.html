@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/5da6fe0c36.js" crossorigin="anonymous"></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <h1>Start bootstrap</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="avatar">
+        <img src="./img/avataaars.svg" alt="image de l'avatar">
+        <h2>Start bootstrap</h2>
+        <div class="line">
+            <div class="line__left"></div>
+            <i class="fas fa-star"></i>
+            <div class="line__right"></div>
+        </div>
+        <p>Graphic Artist - Web Designer - Illustrator</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="line2">
+            <div class="line__left2"></div>
+            <i class="fas fa-star"></i>
+            <div class="line__right2"></div>
+        </div>
+        <div class="portfolio__img">
+            <a href="#"><img src="./img/portfolio/cabin.png" alt=""></a>
+            <a href="#"><img src="./img/portfolio/cake.png" alt=""></a>
+            <a href="#"><img src="./img/portfolio/circus.png" alt=""></a>
+            <a href="#"><img src="./img/portfolio/game.png" alt=""></a>
+            <a href="#"><img src="./img/portfolio/safe.png" alt=""></a>
+            <a href="#"><img src="./img/portfolio/submarine.png" alt=""></a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <div class="line">
+            <div class="line__left"></div>
+            <i class="fas fa-star"></i>
+            <div class="line__right"></div>
+        </div>
+        <div class="text">
+            <div>
+                <p>Freelancer is a free bootstrap theme created by Start Bootstrap.
+                    The download includes the complete source files including HTML, CSS,
+                    and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+            </div>
+            <div>
+                <p>You can create your own custom avatar for the masthead, change the icon in the
+                    dividers, and add your email address to the contact form to make it fully functional!</p>
+            </div>
+        </div>
+        <div class="btn__container">
+            <button class="btn"><i class="fas fa-download"></i>Free download!</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <div class="line2">
+            <div class="line__left2"></div>
+            <i class="fas fa-star"></i>
+            <div class="line__right2"></div>
+        </div>
+        <form class = "form__contact" method="GET" action="#">
+            <input type="name" class="name" placeholder="Name"/>
+            <input type="mail" class="mail" placeholder="Email Adress"/>
+            <input type="number" class="phone" placeholder="Phone number"/>
+            <input type="message" class="message" placeholder="Message"/>
+            <button class="send">Send</button>
+        </form>
+    </section>
+</body>
+
+</html>

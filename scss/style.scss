@@ -28,9 +28,10 @@ $secondary-color : #2c3e50;
 // Header
 
 .header{
+    flex-wrap: wrap;
     position: fixed;
     z-index: 2;
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -51,15 +52,23 @@ $secondary-color : #2c3e50;
         font-size: 1.2rem;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         opacity: 0;
         transform: translateY(-30px);
         animation: apparition 0.5s 1.3s ease-in-out forwards;
+        padding-right: 10px;
+        @media screen and (max-width: 400px) {
+            width: 300px;
+        }
     }
 }
+
 .nav li {
     &:hover{
     color: $primary-color;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
     }
 }
 
@@ -67,8 +76,9 @@ $secondary-color : #2c3e50;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
-    height: 705px;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
     background-color: $primary-color;
     color: white;
     & img{
@@ -76,7 +86,7 @@ $secondary-color : #2c3e50;
         height: 300px;
         width: 300px;
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(-20px);
         animation: apparition 0.5s 0.8s ease-in-out forwards;
     }
     & h2{
@@ -86,8 +96,11 @@ $secondary-color : #2c3e50;
         font-weight: bold;
         padding-bottom: 20px;
         opacity: 0;
-        transform: translateX(30px);
+        transform: translateX(-20px);
         animation: apparition 0.5s 0.5s ease-in-out forwards;
+        @media screen and (max-width: 768px) {
+            font-size: 2.5rem;
+        }
     }
     & p{
         font-size: 1.5rem;
@@ -168,22 +181,29 @@ $secondary-color : #2c3e50;
 }
 
 .portfolio__img{
-    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    height: 430px;
     max-width: 830px;
+    @media screen and (max-width: 768px) {
+        justify-content: space-around;
+    }
 }
 
 .portfolio__img img{
+    cursor: pointer;
+    display: flex;
     height: 180px;
     width: 250px;
     border-radius: 10px;
-    transition: 150ms ease-in-out;
+    margin: 10px;
     &:hover{
+        transition: 250ms ease-in-out;
         opacity: .2;
     }
+}
+.container{
+    position: relative;
 }
 
 .background{
@@ -195,7 +215,8 @@ $secondary-color : #2c3e50;
     border-radius: 10px;
     background-color: $primary-color;
     position: absolute;
-    bottom: 250px;
+    bottom: 10px;
+    left: 10px;
     z-index: -1;
     & .fas{
         color:white;
@@ -211,7 +232,8 @@ $secondary-color : #2c3e50;
     border-radius: 10px;
     background-color: $primary-color;
     position: absolute;
-    bottom: 35px;
+    bottom: 10px;
+    left: 10px;
     z-index: -1;
     & .fas{
         color:white;
@@ -237,13 +259,15 @@ $secondary-color : #2c3e50;
 .text{
     display: flex;
     justify-content: space-between;
-    height: 150px;
     max-width: 900px;
     font-size: 1.3rem;
     & p{
         max-width: 349px;
         padding-right: 30px;
         padding-left: 30px;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 1rem;
     }
 }
 .btn__container{
@@ -290,13 +314,15 @@ $secondary-color : #2c3e50;
 
     & input{
         font-size: 1.7rem;
-        width: 50vw;
-        max-width: 50vw;
+        width: 70vw;
         padding: 25px 0;
         border-top : none;
         border-left: none;
         border-right: none;
         border-bottom: 1px solid #f2f2f2;
+        @media screen and (max-width: 400px) {
+            font-size: 1.3rem;
+        }
     }
 }
 .message{
@@ -308,8 +334,6 @@ $secondary-color : #2c3e50;
 }
 .send{
     cursor: pointer;
-    position: relative;
-    right: 300px;
     margin-top: 20px;
     border: none;
     background-color: $primary-color;
@@ -327,14 +351,19 @@ footer{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    flex-wrap: wrap;
     background-color: $secondary-color;
     color: white;
     padding-top: 50px;
     padding-bottom: 40px;
+    @media screen and (max-width: 768px) {
+        font-size: 1rem;
+    }
 }
 .location, .social, .freelance{
     text-align: center;
     max-width: 215px;
+    padding-bottom: 20px;
     & h4{
         font-size: 1.2rem;
         text-transform: uppercase;
@@ -362,6 +391,10 @@ footer{
             background-color: white;
             color: $secondary-color;
         }
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+            padding: 6px;
+        }
     }
     & .fb{
         font-size: 1.3rem;
@@ -373,5 +406,13 @@ footer{
             background-color: white;
             color: $secondary-color;
         }
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+            padding: 6px 9px;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        width: 170px;
+        right: 0;
     }
 }

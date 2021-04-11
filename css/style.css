@@ -18,6 +18,19 @@ li {
   font-family: sans-serif;
 }
 
+.avatar, #portfolio, #about, #contact, .form__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 @-webkit-keyframes apparition {
   100% {
     opacity: 1;
@@ -105,16 +118,6 @@ li {
 }
 
 .avatar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-align: center;
   padding-top: 80px;
   padding-bottom: 60px;
@@ -202,16 +205,6 @@ li {
 }
 
 #portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding-bottom: 50px;
   color: #2c3e50;
 }
@@ -326,42 +319,7 @@ li {
   font-size: 5rem;
 }
 
-.background2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 180px;
-  width: 250px;
-  border-radius: 10px;
-  background-color: #1abc9c;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  z-index: -1;
-}
-
-.background2 .fas {
-  color: white;
-  font-size: 5rem;
-}
-
 #about {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #1abc9c;
   color: white;
 }
@@ -397,45 +355,7 @@ li {
   }
 }
 
-.btn__container {
-  margin-top: 70px;
-  padding-bottom: 80px;
-}
-
-.btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  cursor: pointer;
-  width: 250px;
-  color: white;
-  border: 2px solid white;
-  background-color: #1abc9c;
-  border-radius: 10px;
-  font-size: 1.4rem;
-  padding: 22px 25px;
-}
-
-.btn:hover {
-  -webkit-transition: 400ms;
-  transition: 400ms;
-  background-color: white;
-  color: #2c3e50;
-}
-
 #contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #2c3e50;
 }
 
@@ -448,16 +368,6 @@ li {
 }
 
 .form__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-bottom: 80px;
 }
 
@@ -581,9 +491,9 @@ footer {
 
 .icons .icon {
   font-size: 1.3rem;
-  padding: 13px;
   border: 2px solid white;
   border-radius: 50%;
+  padding: 13px;
 }
 
 .icons .icon:hover {
@@ -594,7 +504,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .icons .icon {
+  .icons {
     font-size: 1rem;
     padding: 6px;
   }
@@ -602,9 +512,9 @@ footer {
 
 .icons .fb {
   font-size: 1.3rem;
-  padding: 13px 17px;
   border: 2px solid white;
   border-radius: 50%;
+  padding: 13px 17px;
 }
 
 .icons .fb:hover {
@@ -615,7 +525,7 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .icons .fb {
+  .icons {
     font-size: 1rem;
     padding: 6px 9px;
   }
@@ -626,5 +536,33 @@ footer {
     width: 170px;
     right: 0;
   }
+}
+
+.btn__container {
+  margin-top: 70px;
+  padding-bottom: 80px;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+  width: 250px;
+  color: white;
+  border: 2px solid white;
+  background-color: #1abc9c;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  padding: 22px 25px;
+}
+
+.btn:hover {
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  background-color: white;
+  color: #2c3e50;
 }
 /*# sourceMappingURL=style.css.map */

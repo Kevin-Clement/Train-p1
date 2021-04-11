@@ -1,0 +1,50 @@
+#contact{
+    @extend %center-column;
+    color: $secondary-color;
+    & h2{
+        margin-top: 60px;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+}
+
+.form__contact{
+    @extend %center-column;
+    margin-bottom: 80px;
+
+    & input{
+        font-size: 1.7rem;
+        width: 70vw;
+        padding: 25px 0;
+        border-top : none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #f2f2f2;
+        @media screen and (max-width: 400px) {
+            font-size: 1.3rem;
+        }
+    }
+}
+.message{
+    height: 250px;
+    &::placeholder{
+        position: relative;
+        bottom: 80px;
+    }
+}
+.send{
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    padding: 17px 22px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    transition: 200ms ease-in-out;
+    &:hover{
+        background-color: darken($primary-color, 10%);
+    }
+}

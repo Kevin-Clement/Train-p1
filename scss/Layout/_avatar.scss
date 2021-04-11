@@ -1,0 +1,66 @@
+// Avatar 
+
+.avatar{
+    @extend %center-column;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    background-color: $primary-color;
+    color: white;
+    & img{
+        padding-top: 50px;
+        height: 300px;
+        width: 300px;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: apparition 0.5s 0.8s ease-in-out forwards;
+    }
+    & h2{
+        padding-top: 40px;
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding-bottom: 20px;
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: apparition 0.5s 0.5s ease-in-out forwards;
+        @media screen and (max-width: 768px) {
+            font-size: 2.5rem;
+        }
+    }
+    & p{
+        font-size: 1.5rem;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: apparition 0.5s 1.3s ease-in-out forwards;
+    }
+}
+
+.line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    color: white;
+    padding-bottom: 30px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: apparition 0.5s 1.3s ease-in-out forwards;
+    & i{
+        font-size: 1.8rem;
+    }
+    & .line__left{
+        width: 150px;
+        border: none;
+        border-top: 4px solid white;
+        border-radius: 4px;
+        margin-right: 15px;
+    }   
+    & .line__right{
+        width: 150px;
+        border: none;
+        border-top: 4px solid white;
+        border-radius: 4px;
+        margin-left: 15px;
+    }
+}

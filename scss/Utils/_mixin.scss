@@ -1,0 +1,13 @@
+
+// Mixins
+
+@mixin icon-footer {
+    font-size: 1.3rem;
+    border : 2px solid white;
+    border-radius: 50%;
+    &:hover{
+        transition: 250ms ease-in-out;
+        background-color: white;
+        color: $secondary-color;
+    }
+}

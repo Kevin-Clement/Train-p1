@@ -1,3 +1,6 @@
+
+// About
+
 .btn__container{
     margin-top: 70px;
     padding-bottom: 80px;
@@ -17,5 +20,22 @@
         transition: 400ms;
         background-color: white;
         color: $secondary-color;
+    }
+}
+
+// Contact
+
+.send{
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    background-color: $primary-color;
+    color: white;
+    padding: 17px 22px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    transition: 200ms ease-in-out;
+    &:hover{
+        background-color: darken($primary-color, 10%);
     }
 }

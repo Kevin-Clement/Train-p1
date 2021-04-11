@@ -411,23 +411,6 @@ li {
   bottom: 80px;
 }
 
-.send {
-  cursor: pointer;
-  margin-top: 20px;
-  border: none;
-  background-color: #1abc9c;
-  color: white;
-  padding: 17px 22px;
-  border-radius: 5px;
-  font-size: 1.3rem;
-  -webkit-transition: 200ms ease-in-out;
-  transition: 200ms ease-in-out;
-}
-
-.send:hover {
-  background-color: #148f77;
-}
-
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -564,5 +547,22 @@ footer {
   transition: 400ms;
   background-color: white;
   color: #2c3e50;
+}
+
+.send {
+  cursor: pointer;
+  margin-top: 20px;
+  border: none;
+  background-color: #1abc9c;
+  color: white;
+  padding: 17px 22px;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+
+.send:hover {
+  background-color: #148f77;
 }
 /*# sourceMappingURL=style.css.map */

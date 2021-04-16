@@ -387,28 +387,35 @@ li {
   }
 }
 
-.message {
+.form-control {
   height: 250px;
+  width: 70vw;
+  font-size: 1.7rem;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid #f2f2f2;
+  padding-top: 20px;
 }
 
-.message::-webkit-input-placeholder {
-  position: relative;
-  bottom: 80px;
+.form-control::-webkit-input-placeholder {
+  font-size: 1.7rem;
+  padding-top: 3px;
 }
 
-.message:-ms-input-placeholder {
-  position: relative;
-  bottom: 80px;
+.form-control:-ms-input-placeholder {
+  font-size: 1.7rem;
+  padding-top: 3px;
 }
 
-.message::-ms-input-placeholder {
-  position: relative;
-  bottom: 80px;
+.form-control::-ms-input-placeholder {
+  font-size: 1.7rem;
+  padding-top: 3px;
 }
 
-.message::placeholder {
-  position: relative;
-  bottom: 80px;
+.form-control::placeholder {
+  font-size: 1.7rem;
+  padding-top: 3px;
 }
 
 footer {
